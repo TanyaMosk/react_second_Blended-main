@@ -26,7 +26,11 @@ export class SearchForm extends Component {
   render() {
     return (
       <SearchFormStyled onSubmit={this.handleSubmit}>
-        <InputSearch onChange={this.handleInput} value={this.state.query} />
+        <InputSearch onChange={this.handleInput} value={this.state.query}
+         placeholder="What do you want to write?"
+         name="search"
+         required
+         autoFocus/>
         <FormBtn type="submit">
           <FiSearch />
         </FormBtn>

@@ -9,15 +9,15 @@ import {
     // RiEdit2Line
 } from 'react-icons/ri';
 
-export const Todo = () => {
+export const Todo = ({id,text,onDelete,index}) => {
     return (
     <>
       <TodoWrapper>
        <Text textAlign="center" marginBottom="20px">
-         TODO #1
+         TODO #{index}
         </Text>
-        <Text>Some description</Text>
-        <DeleteButton type="button">
+        <Text>{text}</Text>
+        <DeleteButton type="button" onClick={()=>{onDelete(id)}}>
         <RiDeleteBinLine size={24} />
         </DeleteButton>
       </TodoWrapper>
