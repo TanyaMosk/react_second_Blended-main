@@ -98,7 +98,7 @@ export class Gallery extends Component {
           ))}          
         </Grid>        
          }       
-        {images.length > 1 && <Button type='button' onClick={this.loadMore}>Load more</Button>}        
+        {images.length !== 0 && <Button type='button' onClick={this.loadMore}>Load more</Button>}        
       </>
     );
   }
