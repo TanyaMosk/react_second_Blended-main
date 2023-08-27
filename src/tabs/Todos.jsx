@@ -34,6 +34,10 @@ export class Todos extends Component {
   }
   
   handleSubmit = (newText) => {
+    const todoText = this.state.todos.find(todo => todo.text === newText)
+    if (todoText) {
+      return alert('This name already exists');
+    }
     const todo = { text: newText, id: nanoid() };
     this.setState(prevState => ({ todos: [...prevState.todos, todo] })
     );    
